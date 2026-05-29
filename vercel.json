@@ -1,5 +1,6 @@
 {
-  "buildCommand": "npx prisma generate && npm run build",
-  "installCommand": "npm install",
-  "framework": "remix"
+  "buildCommand": "npx prisma generate && npx react-router build",
+  "outputDirectory": "build/client",
+  "framework": null,
+  "installCommand": "npm install"
 }
