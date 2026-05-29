@@ -1,5 +1,5 @@
 import { boundary } from "@shopify/shopify-app-react-router/server";
-import { authenticate } from "../shopify.server";
+import { authenticate } from "../shopify.server.js";
 
 export const loader = async ({ request }) => {
   await authenticate.admin(request);
