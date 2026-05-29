@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+  <!-- Background -->
+  <rect width="1200" height="1200" rx="240" fill="#008060"/>
+  
+  <!-- Box body -->
+  <rect x="250" y="480" width="700" height="520" rx="40" fill="white" opacity="0.95"/>
+  
+  <!-- Box top left flap -->
+  <polygon points="250,480 600,380 600,480" fill="white" opacity="0.7"/>
+  
+  <!-- Box top right flap -->
+  <polygon points="950,480 600,380 600,480" fill="white" opacity="0.85"/>
+  
+  <!-- Box center line -->
+  <line x1="600" y1="480" x2="600" y2="1000" stroke="#008060" stroke-width="18" opacity="0.3"/>
+  
+  <!-- Email envelope icon inside box -->
+  <rect x="370" y="580" width="460" height="320" rx="24" fill="#008060" opacity="0.15"/>
+  <rect x="370" y="580" width="460" height="320" rx="24" fill="none" stroke="#008060" stroke-width="20"/>
+  <polyline points="370,580 600,740 830,580" fill="none" stroke="#008060" stroke-width="20"/>
+
+  <!-- Exclamation badge -->
+  <circle cx="880" cy="340" r="130" fill="#e44c4c"/>
+  <rect x="855" y="240" width="50" height="130" rx="25" fill="white"/>
+  <circle cx="880" cy="420" r="28" fill="white"/>
+</svg>

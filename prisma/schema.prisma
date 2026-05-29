@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model EmailHistory {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  shop         String
+  productId    String
+  productTitle String
+  productImage String?
+  productPrice String?
+  recipients   String[]
+  sentAt       DateTime @default(now())
+  status       String   @default("sent")
+
+  @@index([shop, sentAt])
+}
