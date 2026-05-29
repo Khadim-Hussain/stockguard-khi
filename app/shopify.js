@@ -5,7 +5,7 @@ import {
   shopifyApp,
 } from "@shopify/shopify-app-react-router/server";
 import { MongoDBSessionStorage } from "@shopify/shopify-app-session-storage-mongodb";
-import prisma from "./db.server.js";
+import prisma from "./db.js";
 
 const shopify = shopifyApp({
   apiKey: process.env.SHOPIFY_API_KEY,
@@ -25,7 +25,12 @@ const shopify = shopifyApp({
 
 export { prisma };
 export default shopify;
+
 export const apiVersion = ApiVersion.October25;
-export const addDocumentResponseHeaders = shopify.addDocumentResponseHeaders;
-export const authenticate = shopify.authenticate;
-export const login = shopify.login;
+export const addDocumentResponseHeaders = (...args) => shopify.addDocumentResponseHeaders(...args);
+export const authenticate = {
+  admin: (...args) => shopify.authenticate.admin(...args),
+  public: (...args) => shopify.authenticate.public(...args),
+  webhook: (...args) => shopify.authenticate.webhook(...args),
+};
+export const login = (...args) => shopify.login(...args);
